@@ -93,7 +93,7 @@ function search() {
 
   const matches = data.filter(row =>
     (row.arabic_name && normalize(row.arabic_name).includes(input)) ||
-    (row.seating_no && row.seating_no.includes(input))
+    (row.seating_no && row.seating_no.toString().includes(input))
   ).slice(0, 5)
 
   if (matches.length > 0) {
